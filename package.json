@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-04-phonebook",
+  "name": "goit-react-hw-06-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bolotinalexey.github.io/goit-react-hw-04-phonebook/",
+  "homepage": "https://bolotinalexey.github.io/goit-react-hw-06-phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -45,12 +45,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://bolotinalexey.github.io/goit-react-hw-04-phonebook.git"
+    "url": "git+https://bolotinalexey.github.io/goit-react-hw-06-phonebook.git"
   },
   "keywords": [],
   "author": "Oleksii Bolotin",
   "license": "ISC",
   "bugs": {
-    "url": "https://bolotinalexey.github.io/goit-react-hw-04-phonebook/issues"
+    "url": "https://bolotinalexey.github.io/goit-react-hw-06-phonebook/issues"
   }
 }

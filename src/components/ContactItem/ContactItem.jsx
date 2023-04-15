@@ -1,18 +1,22 @@
 import { Item } from './ContactItem.styled';
-import PropTypes from 'prop-types';
+import { deleteContact } from '../../redux/contactsSlice';
 
-function ContactItem({ deleteRec, name, number, id }) {
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+
+function ContactItem({ name, number, id }) {
+  const dispatch = useDispatch();
+  const onDelete = () => dispatch(deleteContact({ id }));
   return (
     <Item>
       <p>
         {name}: {number}
       </p>
-      <button onClick={() => deleteRec(id)}>Delete</button>
+      <button onClick={onDelete}>Delete</button>
     </Item>
   );
 }
 ContactItem.propTypes = {
-  deleteRec: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
 };
