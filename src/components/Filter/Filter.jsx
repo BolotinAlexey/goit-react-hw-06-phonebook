@@ -1,7 +1,12 @@
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filterSlice';
 import { Label } from './Filter.styled';
 
-function Filter({ handlerChangeFilter, value }) {
+function Filter() {
+  const dispatch = useDispatch();
+  const handlerChangeFilter = e => {
+    dispatch(setFilter(e.target.value));
+  };
   return (
     <>
       <Label htmlFor="filter">Find contacts by name:</Label>
@@ -10,15 +15,9 @@ function Filter({ handlerChangeFilter, value }) {
         type="text"
         name="filter"
         onChange={handlerChangeFilter}
-        value={value}
       />
     </>
   );
 }
-
-Filter.propTypes = {
-  handlerChangeFilter: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
-};
 
 export default Filter;

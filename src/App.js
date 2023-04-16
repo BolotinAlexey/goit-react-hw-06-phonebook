@@ -3,7 +3,7 @@
 
 // import { initialData } from './data.js';
 import ContactForm from 'components/ContactForm/ContactForm';
-// import Filter from 'components/Filter/Filter';
+import Filter from 'components/Filter/Filter';
 import ContactList from 'components/ContactList/ContactList';
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       <ContactForm />
       {/* <ContactForm /> */}
       <h2>Contacts</h2>
-      {/* <Filter value={filter} handlerChangeFilter={handlerChangeFilter} /> */}
+      <Filter />
       <ContactList
       // filter={filter}
       // contacts={contacts}

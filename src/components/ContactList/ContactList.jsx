@@ -2,7 +2,7 @@
 import { Ul } from './ContactList.styled';
 import ContactItem from 'components/ContactItem/ContactItem';
 import { useSelector } from 'react-redux';
-import { getContacts } from '../../redux/selectors';
+import { getContacts, getFilter } from '../../redux/selectors';
 
 // function ContactList({ filter, contacts }) {
 function ContactList() {
@@ -11,11 +11,15 @@ function ContactList() {
   //   return contacts.filter(({ name }) => name.toLowerCase().includes(subStr));
   // };
   const contacts = useSelector(getContacts);
+  const filter = useSelector(getFilter);
+  const visibleContacts = contacts.filter(({ name }) =>
+    name.toLowerCase().includes(filter)
+  );
   console.log(contacts);
 
   return (
     <Ul>
-      {contacts.map(({ name, id, number }) => (
+      {visibleContacts.map(({ name, id, number }) => (
         <ContactItem
           id={id}
           key={id}
