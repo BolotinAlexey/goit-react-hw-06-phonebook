@@ -5,7 +5,7 @@ import { Label } from './Filter.styled';
 function Filter() {
   const dispatch = useDispatch();
   const handlerChangeFilter = e => {
-    dispatch(setFilter(e.target.value));
+    dispatch(setFilter(e.target.value.toLowerCase().trim()));
   };
   return (
     <>

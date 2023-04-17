@@ -6,7 +6,10 @@ import { useDispatch } from 'react-redux';
 
 function ContactItem({ name, number, id }) {
   const dispatch = useDispatch();
-  const onDelete = () => dispatch(deleteContact({ id }));
+  const onDelete = () => {
+    dispatch(deleteContact({ id }));
+  };
+
   return (
     <Item>
       <p>
